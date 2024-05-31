@@ -14,6 +14,7 @@ struct ContentView: View {
     @Environment(\.modelContext) private var context
     @Query(filter: #Predicate<Item> {$0.value > 1000}, sort: \Item.date) private var items: [Item]
     @State private var itemToEdit : Item?
+    
 
     var body: some View {
         NavigationStack {
